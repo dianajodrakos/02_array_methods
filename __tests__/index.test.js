@@ -1,4 +1,4 @@
-import { mapArray, filterArray } from '../index.js';
+import { mapArray, filterArray, findIndex } from '../index.js';
 
 describe('Array Methods', () => {
 
@@ -29,8 +29,15 @@ describe('Array Methods', () => {
   });
 
   describe('findIndex', () => {
-      it('returns the index of the first item in the array whose callback returns a truthy value', () => {
-          
-      });
-  })
+    it('returns the index of the first item in the array whose callback returns a truthy value', () => {
+      const array = [1, 2, 3, 4];
+      const callback = item => item % 2;
+  
+      const expected = 1;
+      const actual = findIndex(array, callback);
+  
+      expect(actual).toEqual(expected);
+      expect(actual).not.toEqual(array);
+    });
+  });
 });
