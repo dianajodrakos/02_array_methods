@@ -27,4 +27,10 @@ describe('Array Methods', () => {
       expect(actual).not.toEqual(array);
     });
   });
+
+  describe('findIndex', () => {
+      it('returns the index of the first item in the array whose callback returns a truthy value', () => {
+          
+      });
+  })
 });

@@ -15,3 +15,7 @@ export const filterArray = (arr, callback) => {
   }
   return filteredArray;
 };
+
+export const findIndex = (arr, callback) => {
+    
+}
