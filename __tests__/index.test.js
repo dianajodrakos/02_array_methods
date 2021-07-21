@@ -43,7 +43,14 @@ describe('Array Methods', () => {
 
   describe('reduceArray', () => {
     it('returns an accumulator with the results of calling a function on every item in the original array', () => {
+      const array = [1, 2, 3, 4];
+      const callback = (accumulator, item) => accumulator + item;
 
+      const expected = 10;
+      const actual = reduceArray(array, callback);
+
+      expect(actual).toEqual(expected);
+      expect(actual).not.toEqual(array);
     });
   });
 });
