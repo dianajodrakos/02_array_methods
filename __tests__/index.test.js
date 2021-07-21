@@ -1,4 +1,4 @@
-import { mapArray, filterArray, findIndex } from '../index.js';
+import { mapArray, filterArray, findIndex, reduceArray } from '../index.js';
 
 describe('Array Methods', () => {
 
@@ -38,6 +38,12 @@ describe('Array Methods', () => {
   
       expect(actual).toEqual(expected);
       expect(actual).not.toEqual(array);
+    });
+  });
+
+  describe('reduceArray', () => {
+    it('returns an accumulator with the results of calling a function on every item in the original array', () => {
+
     });
   });
 });

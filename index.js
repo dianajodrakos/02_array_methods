@@ -9,15 +9,13 @@ export const mapArray = (arr, callback) => {
 export const filterArray = (arr, callback) => {
   const filteredArray = [];
   let filteredIndex = 0;
-  
+
   for(let i = 0; i < arr.length; i++) {
     if (callback(arr[i]) === 0) {
       filteredArray[filteredIndex] = arr[i];
       filteredIndex++;
     }
   }
-
-  console.log('filteredArray', filteredArray);
 
   return filteredArray;
 };
@@ -32,3 +30,6 @@ export const findIndex = (arr, callback) => {
   return index;
 };
 
+export const reduceArray = (arr, callback, initialValue) => {
+
+};
