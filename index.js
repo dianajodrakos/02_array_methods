@@ -5,3 +5,7 @@ export const mapArray = (arr, callback) => {
   }
   return mappedArray;
 };
+
+export const filterArray = (arr, callback) => {
+
+};
