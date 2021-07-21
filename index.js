@@ -7,5 +7,11 @@ export const mapArray = (arr, callback) => {
 };
 
 export const filterArray = (arr, callback) => {
-
+  const filteredArray = [];
+  for(let i = 0; i < arr.length; i++) {
+    if (callback(arr[i]) === 0) {
+      filteredArray.push(arr[i]);
+    }
+  }
+  return filteredArray;
 };
