@@ -56,9 +56,9 @@ describe('Array Methods', () => {
     it('returns an accumulator using an initial value with the results of calling a function on every item in the original array', () => {
       const array = [1, 2, 3, 4];
       const callback = (accumulator, item) => accumulator + item;
-      const initialValue = 5
+      const initialValue = 5;
       
-      const expected = 10;
+      const expected = 15;
       const actual = reduceArray(array, callback, initialValue);
 
       expect(actual).toEqual(expected);
