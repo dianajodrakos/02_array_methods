@@ -39,6 +39,17 @@ describe('Array Methods', () => {
       expect(actual).toEqual(expected);
       expect(actual).not.toEqual(array);
     });
+
+    it('returns -1 when no index in the array evaluates to true using the callback function', () => {
+      const array = [1, 3, 5, 7];
+      const callback = item => item % 2;
+  
+      const expected = -1;
+      const actual = findIndex(array, callback);
+  
+      expect(actual).toEqual(expected);
+      expect(actual).not.toEqual(array);
+    });
   });
 
   describe('reduceArray', () => {
