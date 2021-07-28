@@ -42,6 +42,6 @@ export const reduceArray = (arr, callback, initialValue) => {
   return acc;
 };
 
-export const reduceArray = (arr, callback) => {
+export const everyArray = (arr, callback) => {
 
 };
