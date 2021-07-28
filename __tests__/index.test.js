@@ -65,4 +65,21 @@ describe('Array Methods', () => {
       expect(actual).not.toEqual(array);
     });
   });
+
+  describe('everyArray', () => {
+    it('returns true because every item in an array evaluated by a callback functions return true', () => {
+      const array = [1, 2, 3, 4];
+      const callback = (accumulator, item) => accumulator + item;
+
+      const expected = 10;
+      const actual = reduceArray(array, callback);
+
+      expect(actual).toEqual(expected);
+      expect(actual).not.toEqual(array);
+    });
+
+    it('returns false every item in an array evaluated by a callback functions doesn\'t return true', () => {
+
+    });
+  });
 });
