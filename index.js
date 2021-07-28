@@ -21,7 +21,7 @@ export const filterArray = (arr, callback) => {
 };
 
 export const findIndex = (arr, callback) => {
-  let index = '';
+  let index = -1;
   for(let i = 0; i < arr.length; i++) {
     if(callback(arr[i]) === 0) {
       return index = i;
