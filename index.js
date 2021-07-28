@@ -41,3 +41,16 @@ export const reduceArray = (arr, callback, initialValue) => {
   }
   return acc;
 };
+
+export const everyArray = (arr, callback) => {
+  let evalArray = 0;
+  for(let i = 0; i < arr.length; i++) {
+    if(callback(arr[i])) {
+      evalArray++;
+    } 
+  }
+
+  if(evalArray === arr.length) {
+    return true;
+  } else return false;
+};

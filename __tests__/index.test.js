@@ -1,4 +1,4 @@
-import { mapArray, filterArray, findIndex, reduceArray } from '../index.js';
+import { mapArray, filterArray, findIndex, reduceArray, everyArray } from '../index.js';
 
 describe('Array Methods', () => {
 
@@ -60,6 +60,30 @@ describe('Array Methods', () => {
       
       const expected = 15;
       const actual = reduceArray(array, callback, initialValue);
+
+      expect(actual).toEqual(expected);
+      expect(actual).not.toEqual(array);
+    });
+  });
+
+  describe('everyArray', () => {
+    it('returns true because every item in an array evaluated by a callback functions return true', () => {
+      const array = [1, 2, 3, 4];
+      const callback = (item) => Number.isInteger(item);
+      
+      const expected = true;
+      const actual = everyArray(array, callback);
+
+      expect(actual).toEqual(expected);
+      expect(actual).not.toEqual(array);
+    });
+
+    it('returns false every item in an array evaluated by a callback functions doesn\'t return true', () => {
+      const array = [1, 2, 3, 4, 'five'];
+      const callback = (item) => Number.isInteger(item);
+      
+      const expected = false;
+      const actual = everyArray(array, callback);
 
       expect(actual).toEqual(expected);
       expect(actual).not.toEqual(array);
